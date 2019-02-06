@@ -1,0 +1,14 @@
+Fx <- function(x) (e^x)-pi*x)
+newton<-function(r,tol){
+  dx<-D(as.expression(body(Fx)), "x")
+  i<-0
+  error<-1
+  while(error>tol){
+    if(r!=0){
+      bef=r
+      r<-r-((Fx(r))/dx(r))
+      error<-(abs(bef-r))/abs(bef)
+    }
+  }
+}
+newton(0.5,1.e-2)
