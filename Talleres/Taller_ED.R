@@ -1,5 +1,5 @@
 rm(list=ls())
-options(digits = 5)
+options(digits = 4)
 require(deSolve)
 require(PolynomF)
 
